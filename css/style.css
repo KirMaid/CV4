@@ -2,6 +2,8 @@
 
 .menu A {
   text-decoration: none;
+  color: #AD764B;
+  transition: all 0.4s ease 0s;
 }
 
 .menu__list {
@@ -25,27 +27,11 @@
   line-height: 180%;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #AD764B;
-  transition: all 0.4s ease 0s;
   z-index: 999;
 }
 
 #menu__toggle {
   opacity: 0;
-}
-
-#menu__toggle:checked ~ .menu__btn > span {
-  transform: rotate(45deg);
-}
-
-#menu__toggle:checked ~ .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0);
-}
-
-#menu__toggle:checked ~ .menu__btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
 }
 
 #menu__toggle:checked ~ .menu__box {
@@ -117,6 +103,12 @@
   background-color: #CFD8DC;
 }
 
+.menu__item:active .menu__box {
+  visibility: hidden;
+  left: -100%;
+  background-color: blue;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -135,6 +127,8 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: auto 6px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 25px;
 }
 
 .body_hide {
@@ -166,6 +160,7 @@ h3 {
   width: 155px;
   height: 195px;
   flex: 0 0 155px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   margin-left: 80px;
   transition: all 0.4s ease 0s;
 }
@@ -259,6 +254,10 @@ h3 {
   margin-left: 100px;
 }
 
+.education {
+  margin-bottom: 30px;
+}
+
 .education__title {
   margin-bottom: 10px;
 }
@@ -275,6 +274,20 @@ h3 {
   list-style-type: none;
 }
 
+.projects {
+  margin-bottom: 30px;
+}
+
+.projects__title {
+  padding-bottom: 10px;
+}
+
+.projects__forest img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease 0s;
+}
+
 @media (min-width: 414px) {
   .title__photo:hover {
     transform: scale(1.2);
@@ -288,8 +301,12 @@ h3 {
 }
 
 @media (min-width: 1025px) {
-  .menu__link:hover {
+  .menu A:hover {
     color: #DEB392;
+  }
+
+  .projects__forest img:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 }
 
